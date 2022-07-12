@@ -1,0 +1,3 @@
+this hammer file is to test weather it can be pushed inot the repository without adding into the gitignore file
+
+changing some content
