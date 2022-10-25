@@ -14,11 +14,6 @@ class Solution {
         {
             int curr = window.get(s.charAt(l));
             window.put(s.charAt(l), curr-1);
-            if(window.get(s.charAt(l)) == 0)
-            {
-                window.remove(s.charAt(l));
-            }
-            
             l++;
         }
         ans = Math.max(r-l+1, ans);
