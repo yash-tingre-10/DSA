@@ -40,8 +40,6 @@ class Solution {
                 ans = Math.max( r - l + 1, ans);
             }
             
-            
-            
             while(windowSize>k)
             { 
                 ch = s.charAt(l);
