@@ -16,9 +16,9 @@ class Solution {
             
             if(( r - l + 1) == k)
             {    
-                ans[z++] = window.peekFirst();
-                if(window.peekFirst()==nums[l])
-                    window.pollFirst(); 
+                ans[z++] = window.peek();
+                if(window.peek()==nums[l])
+                    window.pop(); 
                 
                 l++;
                 
