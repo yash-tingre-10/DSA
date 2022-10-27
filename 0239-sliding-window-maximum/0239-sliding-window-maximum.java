@@ -11,7 +11,7 @@ class Solution {
         {
             while(window.size() > 0 && window.peekLast() < nums[r])
                 window.pollLast();
-            window.addLast(nums[r]);
+            window.add(nums[r]);
             
             
             if(( r - l + 1) == k)
