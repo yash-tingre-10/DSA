@@ -39,10 +39,8 @@ class Solution{
     int sum=0;
     int c0=0;
     for(int i=0;i<n;i++)
-        {
-            if(nums[i]==0) c0++;
-            sum+=nums[i];
-        }
+        sum+=nums[i];
+        
          
     if(sum<d || (sum+d)%2!=0 || n==1)
         return 0;
