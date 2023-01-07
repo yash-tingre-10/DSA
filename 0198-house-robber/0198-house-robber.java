@@ -11,7 +11,7 @@ class Solution {
         dp[0] = nums[0];
         // return helper(nums, n-1);
         
-        return helper(nums, 0, n-1);
+        return helper(nums, n-1);
     }
     // Memoizations
 //     static int helper(int [] arr, int n){
@@ -26,14 +26,12 @@ class Solution {
 //     }
     
     // Tabulation
-     static int helper(int [] arr, int s, int n){
+     static int helper(int [] arr, int n){
         
          for(int i=1; i<=n; i++){
             if(i>1) dp[i] = Math.max(dp[i-1],dp[i-2]+arr[i]); 
             else dp[i] = Math.max(dp[i-1],arr[i]);
-         }
-        
-        
+         }   
          return dp[n];
     }
 }
