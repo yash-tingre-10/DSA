@@ -20,16 +20,36 @@ class Solution
      return helper(n,k);   //code here.
     }
     
+    // static long helper(int n, int k){
+        
+    //     if(n==1)
+    //         return k;
+    //     if(n==2)
+    //         return (k + (k*(k-1))) % mod;
+    //     if(dp[n]!=-1)
+    //         return dp[n];
+    //     return dp[n] =  (helper((n-2),k)*(k-1) + helper((n-1), k)*(k-1)) % mod;
+    // }
+    
     static long helper(int n, int k){
         
         if(n==1)
             return k;
         if(n==2)
             return (k + (k*(k-1))) % mod;
-        if(dp[n]!=-1)
-            return dp[n];
-        return dp[n] =  (helper((n-2),k)*(k-1) + helper((n-1), k)*(k-1)) % mod;
+        dp[1] = k;
+        dp[2] = (k+ k*(k-1)) % mod;
+        
+        for(int i=3; i<=n; i++){
+            
+            dp[i] = ( dp[i-2]*(k-1) + dp[i-1]*(k-1) ) % mod;
+        }
+        
+        return dp[n];
     }
+    
+    
+    
 }
 
 
