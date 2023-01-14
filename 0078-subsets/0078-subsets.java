@@ -3,7 +3,7 @@ class Solution {
     
     public List<List<Integer>> subsets(int[] nums) {
         List<Integer> output = new ArrayList<>(); 
-        ans = new ArrayList<>(); 
+        ans = new ArrayList<List<Integer>>();
         helper(nums, output, 0);
         return ans;
     }
@@ -14,15 +14,18 @@ class Solution {
             ans.add(new ArrayList(output));
             return;
         }
+        
+        
         // Include
         output.add(nums[i]);
         helper(nums, output, i+1);
         
         // Exclude
-        while(i+1<nums.length && nums[i]==nums[i+1])
-            i++;
         output.remove(output.size()-1);
         helper(nums, output, i+1);
+       
+        
+
 
     }
 }
