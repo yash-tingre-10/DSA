@@ -14,11 +14,13 @@ class Solution {
             ans.add(new ArrayList(output));
             return;
         }
-        // Exclude
+        // Include
         output.add(nums[i]);
         helper(nums, output, i+1);
         
-        // Include
+        // Exclude
+        while(i+1<nums.length && nums[i]==nums[i+1])
+            i++;
         output.remove(output.size()-1);
         helper(nums, output, i+1);
 
