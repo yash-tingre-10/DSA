@@ -38,7 +38,8 @@ class Solution {
         Collections.sort(temp);
         return temp;
     }
-    
+
+    //Generate all possible subsets
     static void helper(String str, String op){
         
         if(str.length()==0)
