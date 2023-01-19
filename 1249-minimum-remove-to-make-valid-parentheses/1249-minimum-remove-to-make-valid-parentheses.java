@@ -1,6 +1,6 @@
 class Solution {
     public String minRemoveToMakeValid(String s) {
-        String ans = "";
+        
         Stack<Integer> st = new Stack<>();
         int count = 0;
         for(int i=0; i<s.length(); i++)
@@ -28,10 +28,11 @@ class Solution {
         }
         
         Set<Integer> notValid = new HashSet<>(st);
+        StringBuilder ans = new StringBuilder();
         for(int i=0; i<s.length(); i++){
             if(!notValid.contains(i))
-                ans=ans+s.charAt(i);
+                ans.append(s.charAt(i));
         }
-        return ans;
+        return ans.toString();
     }
 }
