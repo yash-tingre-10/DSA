@@ -26,8 +26,7 @@ class Solution {
             if(hs.get(ch)==1)
             {
                 
-                index = i;
-                break;
+                return i;
             }
         }
         return index;
