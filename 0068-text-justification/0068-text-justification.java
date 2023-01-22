@@ -21,15 +21,15 @@ class Solution {
             int extra = (maxWidth - currLen - space) % div;
             int wc = j-i;
             if(wc==1 || j>=n)
-                ans.add(justifyLast(words,atleast,extra,i,j,maxWidth));
+                ans.add(justifyLast(words,i,j,maxWidth));
             else
-                ans.add(justifyLeft(words,atleast,extra,i,j,maxWidth));
+                ans.add(justifyLeft(words,atleast,extra,i,j));
          i=j;   
         }
         
     return ans;
 }
-    static String justifyLast(String [] words,int atleast, int extra, int i, int j,int maxWidth)
+    static String justifyLast(String [] words, int i, int j,int maxWidth)
     {
         StringBuilder sb = new StringBuilder();
         for(int p=i; p<j; p++)
@@ -44,7 +44,7 @@ class Solution {
         return sb.toString();
     }
     
-    static String justifyLeft(String [] words,int atleast, int extra, int i, int j,int maxWidth)
+    static String justifyLeft(String [] words,int atleast, int extra, int i, int j)
     {
         StringBuilder sb = new StringBuilder();
         for(int p=i; p<j; p++)
