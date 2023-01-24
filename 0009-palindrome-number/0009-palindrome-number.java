@@ -8,6 +8,7 @@ class Solution {
             num = num*10 + temp%10;
             temp = temp/10;
         }
+        
         if(num==x)
             return true;
         else return false;
