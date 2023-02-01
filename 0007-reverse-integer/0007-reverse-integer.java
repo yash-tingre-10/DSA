@@ -16,7 +16,7 @@ class Solution {
                 break;
         }
         
-        if(isNegetive==true)
+        if(isNegetive)
             ans = ans * -1;
         if (ans > Integer.MAX_VALUE) return 0;
         if (ans < Integer.MIN_VALUE) return 0;
